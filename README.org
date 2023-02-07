@@ -14,8 +14,8 @@ users can automate the process of composing and sending emails from
 within Emacs.
 
 What this mode does NOT do:
-DOES NOT communicate with outlook/exchange server in any way.
-DOES NOT Fetch and read email yet (todo)
-DOES NOT Send Attachments
-DOES NOT Support text signature
-DOES NOT do many more
++ DOES NOT communicate with outlook/exchange server in any way.
++ DOES NOT Fetch and read email yet (todo)
++ DOES NOT Send Attachments
++ DOES NOT Support text signature
++ DOES NOT do many more
