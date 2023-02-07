@@ -5,17 +5,17 @@ The following processes will be replaced by variables shortly but for now:
 1. Edit "YOURNAME" with your name line 78.
 2. Set "outlook-address1" with your email line 90
 
-;; This Emacs major mode allows users to send emails through Microsoft
-;; Outlook by utilising simple osa-scripting (MacOs only) and you need
-;; the Outlook application therefore.  It eliminates the need for
-;; using fake email client IDs, making it ideal for those who wish to
-;; maintain compliance with organisation regulations.  With this mode,
-;; users can automate the process of composing and sending emails from
-;; within Emacs.
+This Emacs major mode allows users to send emails through Microsoft
+Outlook by utilising simple osa-scripting (MacOs only) and you need
+the Outlook application therefore.  It eliminates the need for
+using fake email client IDs, making it ideal for those who wish to
+maintain compliance with organisation regulations.  With this mode,
+users can automate the process of composing and sending emails from
+within Emacs.
 
-;; What this mode does NOT do:
-;; DOES NOT communicate with outlook/exchange server in any way.
-;; DOES NOT Fetch and read email yet (todo)
-;; DOES NOT Send Attachments
-;; DOES NOT Support text signature
-;; DOES NOT do many more
+What this mode does NOT do:
+DOES NOT communicate with outlook/exchange server in any way.
+DOES NOT Fetch and read email yet (todo)
+DOES NOT Send Attachments
+DOES NOT Support text signature
+DOES NOT do many more
