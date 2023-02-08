@@ -42,7 +42,7 @@
   "Create a new buffer for outlook email composing and switch to it."
   (interactive)
   (switch-to-buffer (generate-new-buffer "outlook compose message"))
-  (outlook-mode)
+  (outlook-compli-mode)
   (insert
    (concat "From:" outlook-address1 "\nTo: \nSubject: \n" )))
 
