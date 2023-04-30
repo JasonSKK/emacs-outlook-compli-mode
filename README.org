@@ -1,6 +1,8 @@
 #+TITLE: emacs-outlook-compli-mode.el
 #+AUTHOR: Jason SK
 
+**DISCLAIMER: Please note that this mode is currently under development and may not work on all systems.  However, I welcome feedback and contributions to help improve it.  Please feel free to adapt the code to suit your needs and make this mode better!.**
+
 #+HTML: <img src="eocmlogo.png" alt="Logo" align="right" width="240" style="padding-left: 20px;"/>
 
 * Introduction
