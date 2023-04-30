@@ -1,3 +1,4 @@
+;;; emacs-outlook-compli-mode --- 2023-02-13 01:19:07 PM
 ;;; emacs-outlook-compli-mode.el --- outlook mode for composing and sending email (ONLY)
 
 ;; Copyright (C) 2023 Iason SK
@@ -20,8 +21,8 @@
 
 ;;; Commentary:
 ;; This Emacs major mode allows users to send emails through Microsoft
-;; Outlook by utilising simple osa-scripting (MacOs only).  You will
-;; therefore need the Outlook application.  It eliminates the need for
+;; Outlook by utilising simple osa-scripting (MacOs only) and you need
+;; the Outlook application therefore.  It eliminates the need for
 ;; using fake email client IDs, making it ideal for those who wish to
 ;; maintain compliance with organisation regulations.  With this mode,
 ;; users can automate the process of composing and sending emails from
@@ -46,12 +47,12 @@
   (insert
    (concat "From:" outlook-address1 "\nTo: \nSubject: \n" )))
 
-(defun outlook-mode-settings ()
+(defun outlook-compli-mode-settings ()
   "Settings for `outlook-mode`."
   (setq fill-column 72) ; wrap lines at 72 characters
   (turn-on-auto-fill))
 
-(add-hook 'outlook-mode-hook 'outlook-mode-settings)
+(add-hook 'outlook-compli-mode-hook 'outlook-compli-mode-settings)
 
 (defun outlook-message-send ()
   "Get the text after the ':' in the first three lines of the buffer and use it as arguments for the outlook-send-message function.
@@ -66,27 +67,28 @@ Also, get the text after the 4th line and pass it as an argument as a string."
           (subject (substring subject-line (1+ (string-match ":" subject-line)) (length subject-line))))
       (forward-line)
       (let ((body (buffer-substring-no-properties (line-beginning-position) (point-max))))
-        (outlook-osascript from subject body to)
-        (message "Sending message from '%s' to '%s' with subject '%s' and body '%s'" from to subject body)
+        ;;(outlook-osascript name from subject body to)
+        (message "Sending message from '%s' '%s' to '%s' with subject '%s' and body '%s'" name from to subject body)
         ))))
 
-(defun outlook-osascript (from subject body to)
+(defun outlook-osascript (name from subject body to)
 "Contains the actual osascript command for Outlook."
 (interactive)
 
 (shell-command (format "osascript -e 'tell application \"Microsoft Outlook\"
-    set theMessage to make new outgoing message with properties {sender:{name:\"YOURNAME\", address:\"%s\"}, subject:\"%s\", plain text content:\"%s\"}
+    set theMessage to make new outgoing message with properties {sender:{name:\"%s\", address:\"%s\"}, subject:\"%s\", plain text content:\"%s\"}
 
     tell theMessage
         make new to recipient with properties {email address:{address:\"%s\"}}
     end tell
     send theMessage
-end tell'" from subject body to)))
+end tell'" name from subject body to)))
 
 
-(define-key outlook-mode-map (kbd "C-c C-c") 'outlook-message-send)
+(define-key outlook-compli-mode-map (kbd "C-c C-c") 'outlook-message-send)
 
 ;; set primary address
 (setq outlook-address1 "youremail@example.co.uk")
+(setq outlook-name1 "YOUR NAME")
 
-(provide 'outlook-mode)
+(provide 'emacs-outlook-compli-mode)
