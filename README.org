@@ -14,16 +14,36 @@ To use the outlook-message-send function, you need to edit two variables in the 
 To do this, look for the following two lines of code in the file:
 
 #+BEGIN_SRC
+;; set primary address
 (setq outlook-address1 "youremail@example.co.uk")
 (setq outlook-name1 "YOUR NAME")
+
+;; set emacs archive directory, where csv is saved
+(setq emacs-outlook-compli-archive-directory "/path/to/outlook-mail")
 #+END_SRC
 
 Replace "youremail@example.co.uk" with your email address and "YOUR NAME" with your name.
 
+Then, if the outlook-mail dir does not exist, create it, for example
+#+BEGIN_SRC
+mkdir ~/outlook-mail
+#+END_SRC
+
 * Limitations
 What this mode does NOT do:
 + DOES NOT communicate with outlook/exchange server in any way.
-+ DOES NOT Fetch and read email yet (todo)
++ DOES NOT Fetch and read email yet (under development)
 + DOES NOT Send Attachments
 + DOES NOT Support text signature
 + DOES NOT do many more
+* Script Attribution
+
+The following scripts were originally created by Moth Software and retrieved on May 1st, 2023, from the [[https://www.mothsoftware.com/][Moth Software]] Blog:
+
+- "Exporting emails from Outlook with AppleScript" -- outlook-compli-export-list-outlook-emails.scpt
+- "How to print a list of selected emails in Outlook" -- emacs-outlook-compli-fetch-email.scpt
+
+I have slightly adapted these scripts to suit my project's needs. However, the core functionality and credit for the original ideas remain with [[https://www.mothsoftware.com/][Moth Software]] and the author Beatrix Willius.
+* Version Details
++ Microsoft Outlook 16.43
++ Emacs 27.1
