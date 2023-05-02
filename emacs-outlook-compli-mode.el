@@ -36,6 +36,7 @@
 ;; DOES NOT do many more
 
 ;;; Code:
+;;;###autoload
 (define-derived-mode outlook-compli-mode text-mode "outlook-compli"
   "Major mode for email compositions through osascripting.")
 
