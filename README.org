@@ -22,12 +22,14 @@ To do this, look for the following two lines of code in the file:
 (setq emacs-outlook-compli-archive-directory "/path/to/outlook-mail")
 #+END_SRC
 
-Replace "youremail@example.co.uk" with your email address and "YOUR NAME" with your name.
+Replace "youremail@example.co.uk" with your email address and "YOUR NAME" with your name, and  "/path/to/outlook-mail" for the directory where emails will be stored.
 
 Then, if the outlook-mail dir does not exist, create it, for example
 #+BEGIN_SRC
 mkdir ~/outlook-mail
 #+END_SRC
+
+For now make sure it is called "outlook-mail" this will be fixed in the future.
 
 * Limitations
 What this mode does NOT do:
