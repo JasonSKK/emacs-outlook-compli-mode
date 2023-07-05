@@ -1,8 +1,6 @@
 ;;; emacs-outlook-compli-mode --- 2023-04-30 09:22:32 PM
 ;;; emacs-outlook-compli-mode.el --- outlook mode for composing and sending email (ONLY)
 
-;; Copyright (C) 2023 Iason SK
-
 ;; Author: Iason SK <jason.skk98[at]gmail[dot]>
 ;; Keywords: outlook, Emacs, compliance.
 
