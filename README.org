@@ -1,7 +1,7 @@
 #+TITLE: emacs-outlook-compli-mode.el
 #+AUTHOR: Jason SK
 
-**DISCLAIMER: Please note that this mode is currently under development and may not work on all systems.  However, I welcome feedback and contributions to help improve it.  Please feel free to adapt the code to suit your needs and make this mode better!.**
+**Note: I no longer maintain this package, as I have fully transitioned to using Debian and no longer require it. Please feel free to fork the repository and update the code as needed. Outlook and macOS have likely changed significantly since I last worked on this mode. You are welcome to adapt and improve it to suit your use case.**
 
 #+HTML: <img src="eocmlogo.png" alt="Logo" align="right" width="240" style="padding-left: 20px;"/>
 
